@@ -1,0 +1,36 @@
+.squad-container {
+  padding: 20px;
+}
+
+.squad-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.empty-squad {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  padding: 40px 20px;
+}
+
+.release-btn {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.release-btn:hover {
+  background-color: #ff5252;
+}
