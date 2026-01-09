@@ -59,7 +59,7 @@ export default function PokemonComponent({ onCatch, isCaught, squadSize }) {
 
   return (
     <div className="pokemon-container">
-      <h1>Pokemon List</h1>
+      <h1 className='pokemon-list-title'>Pokemon List</h1>
       <SearchBar onSearch={handleSearch} />
       <div className="pokemon-grid">
         {shuffleArray(filteredPokemon).map((poke) => {

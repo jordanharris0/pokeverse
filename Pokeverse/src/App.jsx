@@ -2,9 +2,12 @@ import { useState } from 'react'
 import './App.css'
 import PokemonComponent from './components/pokemon.jsx'
 import SquadComponent from './components/squad.jsx'
+import BattleComponent from './components/battle.jsx'
+import pokeball from '../public/pokeball.png'
 
 function App() {
   const [squad, setSquad] = useState([]);
+  const [isBattleMode, setIsBattleMode] = useState(false);
 
   const handleCatch = (pokemonData) => {
     if (squad.length < 6) {
@@ -20,16 +23,33 @@ function App() {
     return squad.some((poke) => poke.name === pokemonName);
   };
 
+  const handleBattle = () => {
+    setIsBattleMode(true);
+  };
+
   return (
     <>
-    <h1>Pokeverse</h1>
+    <h1 className='title'>Pokeverse <img src={pokeball} alt="Pokeball" /></h1>
       <div>
-        <SquadComponent squad={squad} onRelease={handleRelease} />
-        <PokemonComponent 
-          onCatch={handleCatch} 
-          isCaught={isCaught}
-          squadSize={squad.length}
-        />
+        {!isBattleMode ? (
+          <>
+            <SquadComponent squad={squad} onRelease={handleRelease} />
+            {squad.length === 6 && (
+              <div className="battle-button-container">
+                <button className="battle-button" onClick={handleBattle}>
+                  Battle!
+                </button>
+              </div>
+            )}
+            <PokemonComponent 
+              onCatch={handleCatch} 
+              isCaught={isCaught}
+              squadSize={squad.length}
+            />
+          </>
+        ) : (
+          <BattleComponent squad={squad} onExitBattle={() => setIsBattleMode(false)} />
+        )}
       </div>
     </>
   )

@@ -1,0 +1,158 @@
+.battle-container {
+  padding: 20px;
+}
+
+.battle-container h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.exit-battle-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  transition: background-color 0.3s;
+}
+
+.exit-battle-btn:hover {
+  background-color: #45a049;
+}
+
+/* Battle Footer */
+.battle-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  background-color: #f0f0f0;
+  display: flex;
+  gap: 0;
+  padding: 0;
+  z-index: 1000;
+  border-top: 2px solid #1a3a52;
+}
+
+/* Left Box - Moves (65% of footer) */
+.battle-footer-left {
+  flex: 0.65;
+  background-color: white;
+  border-top: 1px solid #1a3a52;
+  border-left: 4px solid #1a3a52;
+  border-bottom: 4px solid #1a3a52;
+  border-right: 2px solid #1a3a52;
+  border-radius: 12px 0 0 12px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Right Box - Stats (35% of footer) */
+.battle-footer-right {
+  flex: 0.35;
+  background-color: white;
+  border-top: 1px solid #1a3a52;
+  border-right: 4px solid #1a3a52;
+  border-bottom: 4px solid #1a3a52;
+  border-left: 2px solid #1a3a52;
+  border-radius: 0 12px 12px 0;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* Moves Grid - 2x2 */
+.moves-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+}
+
+.move-button {
+  background-color: #e8f4f8;
+  border: 2px solid #1a3a52;
+  border-radius: 8px;
+  padding: 12px 8px;
+  text-align: center;
+  font-weight: bold;
+  color: #1a3a52;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  font-size: 0.85rem;
+}
+
+.move-button:hover {
+  background-color: #d0e8f0;
+  transform: scale(1.05);
+}
+
+/* Stats */
+.stats-top {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.pp-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  flex: 1;
+  background-color: #f0f8ff;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #1a3a52;
+}
+
+.pp-value {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #1a3a52;
+}
+
+.pp-label {
+  font-size: 0.7rem;
+  color: #666;
+}
+
+.stats-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.type-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  background-color: #f0f8ff;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #1a3a52;
+  flex: 1;
+}
+
+.type-label {
+  font-size: 0.8rem;
+  color: #666;
+  font-weight: bold;
+}
+
+.type-value {
+  font-weight: bold;
+  color: #1a3a52;
+  text-transform: capitalize;
+}

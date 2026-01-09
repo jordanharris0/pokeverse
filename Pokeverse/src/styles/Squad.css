@@ -34,3 +34,9 @@
 .release-btn:hover {
   background-color: #ff5252;
 }
+
+.mysquad {
+  font-size: 2.5rem;
+  margin: 20px 0;
+  text-shadow: blue 1px 0 5px;
+}

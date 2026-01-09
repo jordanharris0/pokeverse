@@ -5,7 +5,7 @@ import '../styles/Squad.css';
 export default function SquadComponent({ squad, onRelease }) {
   return (
     <>
-      <h1>My Squad</h1>
+      <h1 className='mysquad'>My Squad</h1>
       <div className="squad-container">
         {squad.length === 0 ? (
           <p className="empty-squad">Catch Some Pokemon!</p>

@@ -4,4 +4,33 @@
   text-align: center;
 }
 
+.title {
+  font-size: 3.5rem;
+  margin: 20px 0;
+  text-shadow: red 1px 0 5px;
+  padding-bottom: 25px;
+}
+
+.battle-button-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.battle-button {
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  font-weight: bold;
+}
+
+.battle-button:hover {
+  background-color: #ff5252;
+  transform: scale(1.05);
+}
 

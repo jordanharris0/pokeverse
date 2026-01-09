@@ -110,3 +110,9 @@
   background-color: #ccc;
   cursor: not-allowed;
 }
+
+.pokemon-list-title {
+  font-size: 3.5rem;
+  margin: 20px 0;
+  text-shadow: green 1px 0 5px;
+}
